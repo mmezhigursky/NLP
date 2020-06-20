@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+    <title>Test Website</title>
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="all,index,follow" />
+	<meta name="distribution" content="global" />
+    <link rel="stylesheet"  href="https://use.typekit.net/mez4yxz.css" >
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+ <div class="container">
+        <section id="main" class="section" >
+            <div class="form_group">
+                <div>
+                    <label for="input_data">Please input URL with protocol</label><br>
+                    <input type="text" placeholder="enter site URL" id="input_data" name="input_data" ><br>
+                    <input  id = "generate"type="submit" value="generate">
+                  </div>
+            </div>
+        </section>
+
+        <section id="res" class="section">
+            <div>Last request</div>
+            <div id="entryHolder">
+                <div id='error'></div>
+                <div id='result'></div>
+                <div id='confidence'></div>
+                
+            </div>
+        </section>
+ 
+    
+    <section class="section" id="footer_section">
+        <div class="footer-group">  
+            <a name="contacts"></a>         
+            <p>Contacts</p>
+            <p>Mon–Fri 8:30am – 9pm</p>
+            <ul class="ul-icon">
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+            <p>Designed by M.Mezhigurskii</p>
+        </div>
+    </div>
+</section>
+</div>
+<div id="coverBlack"></div>
+<script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
