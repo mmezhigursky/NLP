@@ -28,15 +28,21 @@ app.use(express.static('dist'))
 
 console.log(__dirname)
 
+// var textapi = new AYLIENTextAPI({
+//     application_id: process.env.API_ID,
+//     application_key: process.env.API_KEY
+//   });
+// console.log(`Your API key is ${process.env.API_KEY}`);
+
 var textapi = new AYLIENTextAPI({
-    application_id: process.env.API_ID,
-    application_key: process.env.API_KEY
-  });
+  application_id: "8d9b74a0",
+  application_key: "049ff3822f1ece069b86d7d9a85795aa"
+});
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
-// console.log(`Your API key is ${process.env.API_KEY}`);
+
 // designates what port the app will listen to for incoming requests
 app.listen(8080, function () {
     console.log('Example app listening on port 8080!');
